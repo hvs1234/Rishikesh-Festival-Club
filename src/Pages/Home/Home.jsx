@@ -1,11 +1,19 @@
 // import React from 'react'
 
+import Footer from "../../Components/Footer/Footer";
+import Hero from "./Hero";
+import HomeMain from "./HomeMain";
+
 const Home = () => {
   return (
     <>
-        <div className="text-[2rem]">RPC App</div>
-    </>
-  )
-}
+      <Hero />
+      <HomeMain />
 
-export default Home
+      {/* Footer */}
+      <Footer />
+    </>
+  );
+};
+
+export default Home;
