@@ -42,17 +42,21 @@ const HomeMain = () => {
       </div>
       <div className="py-[6rem] px-[20rem] max-xl:px-[5rem] max-md:px-[2rem] w-[100%] relative object-cover">
         <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-[black] opacity-[1]"></div>
-        <div className="relative max-w-screen left-0 h-[100%] flex justify-center gap-[2rem] items-center text-center overflow-x-auto no-scrollbar">
+        <div className="relative w-[100%] left-0 h-[100%] flex justify-center gap-[2rem] items-center text-center overflow-x-auto no-scrollbar">
           {homeposterdata.map((e) => {
             return (
               <Link
                 key={e.id}
                 to={e.to}
                 onClick={handleOnClick(e.to)}
-                className="flex flex-col gap-[1rem] items-center justify-center w-[100%] h-[100%] transition-all duration-[0.4s] ease-linear hover:scale-[1.05] z-[9999]"
+                className="flex flex-col gap-[1rem] items-center justify-center w-[100%] h-[100%] transition-all duration-[0.4s] ease-linear hover:scale-[1.05]"
               >
                 <div className="flex items-center justify-center w-[100%] h-[100%]">
-                  <img src={e.img} alt="img" className="w-[100%] h-[100%] rounded-md" />
+                  <img
+                    src={e.img}
+                    alt="img"
+                    className="w-[100%] h-[100%] rounded-md"
+                  />
                 </div>
                 <p className="text-[1.6rem] text-[goldenrod] uppercase font-normal w-[100%]">
                   {e.title}

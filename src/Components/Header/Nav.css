@@ -6,9 +6,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* width: 100%;
+    width: 100%;
     z-index: 9999;
-    margin: 0 auto; */
+    margin: 0 auto;
     transition: all 0.4s ease-in-out;
     
 }
@@ -25,7 +25,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: all 0.3s linear;
         visibility: hidden;
         opacity: 0;

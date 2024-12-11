@@ -60,3 +60,38 @@ export const HomePosterData = [
     title: `Beginners workshop`,
   },
 ];
+
+export const HomePartnersData = [
+  {
+    id: 1,
+    logo: `/Media/Home/14.jpg`,
+  },
+  {
+    id: 2,
+    logo: `/Media/Home/15.png`,
+  },
+  {
+    id: 3,
+    logo: `/Media/Home/16.jpeg`,
+  },
+  {
+    id: 4,
+    logo: `/Media/Home/17.jpg`,
+  },
+  {
+    id: 5,
+    logo: `/Media/Home/18.jpeg`,
+  },
+  {
+    id: 6,
+    logo: `/Media/Home/19.jpg`,
+  },
+  {
+    id: 7,
+    logo: `/Media/Home/20.png`,
+  },
+  {
+    id: 8,
+    logo: `/Media/Home/21.png`,
+  },
+];

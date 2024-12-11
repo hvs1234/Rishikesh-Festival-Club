@@ -30,13 +30,13 @@ body {
 @media (max-width: 1500px) {
   html {
     font-size: 60%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 }
 
 @media (max-width: 1024px) {
   html {
     font-size: 50%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 }
