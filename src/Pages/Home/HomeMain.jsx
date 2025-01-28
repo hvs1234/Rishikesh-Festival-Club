@@ -15,25 +15,48 @@ const HomeMain = () => {
         bg-[url('/Media/Home/1.jpg')] bg-no-repeat bg-center bg-cover"
       >
         <div className="absolute top-0 left-0 w-[100%] h-[100%] opacity-[0.8] bg-[goldenrod]"></div>
-        <div className="relative flex justify-between gap-[4rem] w-[100%] items-center h-[100%] max-md:flex-col max-md:gap-[6rem]">
+        <div className="relative flex flex-col justify-center gap-[2rem] w-[100%] items-center h-[100%] max-md:flex-col max-md:gap-[6rem]">
           <div
             className="relative flex flex-col gap-[1rem] items-center justify-center text-center w-[100%] 
             max-md:px-[2rem]"
           >
             <h2 className="text-[3rem] max-[400px]:text-[2.5rem] text-[black] font-normal">
-              Are you a Memory Catcher, Image Architect, Master of Light?
+              Quick Stats&nbsp; <i className="fa-solid fa-bars-progress"></i>
             </h2>
-            <p className="text-[1.6rem] font-normal">
-              Yes you are at right place. Join our Rishikesh Photography Club,
-              2.5-months Foundation Course Variety of amazing Photowalks and
-              Photo Bus trips to choose from. Enhance your skills with expert
-              mentors and hands-on practice sessions.
-            </p>
+            <div className="flex gap-[6rem] items-center w-[100%] justify-center mt-[2rem]">
+              <div className="flex flex-col gap-[1rem] items-center justify-start text-center">
+                <p className="text-[2rem] text-[black] font-semibold">
+                  Founded
+                </p>
+                <p className="text-[2rem] text-[#212121] font-normal">
+                  29th November 2015
+                </p>
+              </div>
+              <div className="flex flex-col gap-[1rem] items-center justify-start text-center">
+                <p className="text-[2rem] text-[black] font-semibold">
+                  Photowalks Conducted
+                </p>
+                <p className="text-[2rem] text-[#212121] font-normal">81</p>
+              </div>
+              <div className="flex flex-col gap-[1rem] items-center justify-start text-center">
+                <p className="text-[2rem] text-[black] font-semibold">
+                  Years of Operation
+                </p>
+                <p className="text-[2rem] text-[#212121] font-normal">9+</p>
+              </div>
+              <div className="flex flex-col gap-[1rem] items-center justify-start text-center">
+                <p className="text-[2rem] text-[black] font-semibold">
+                  Workshops and Exhibitions Held
+                </p>
+                <p className="text-[2rem] text-[#212121] font-normal">10</p>
+              </div>
+            </div>
           </div>
-          <div className="relative flex items-center justify-center w-[50%]">
+          <div className="relative flex items-center justify-center w-[100%] mt-[1rem]">
             <a
               href="tel:"
-              className="rounded-full px-[2rem] py-[1rem] bg-[black] text-[white] text-[1.6rem] font-normal transition-all duration-[0.2s] ease-linear hover:opacity-[0.8]"
+              className="rounded-full px-[2rem] py-[1rem] bg-[black] text-[white] text-[1.6rem] font-normal transition-all duration-[0.2s] ease-linear 
+              hover:opacity-[0.8]"
             >
               Call: +91-01010101
             </a>

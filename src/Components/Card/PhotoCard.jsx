@@ -39,10 +39,10 @@ const PhotoCard = ({ carddata }) => {
             key={e.id}
             to={e.to}
             className={`flex flex-col gap-[2rem] w-[100%] transition-all duration-[0.8s] ease-in-out cursor-pointer shadow-xl ${
-               isVisible
-                 ? `translate-y-0 opacity-100 delay-[${index * 400}ms]`
-                 : "translate-y-[10rem] opacity-0"
-             }`}
+              isVisible
+                ? `translate-y-0 opacity-100 delay-[${index * 600}ms]`
+                : "translate-y-[10rem] opacity-0"
+            }`}
             style={{
               transitionDelay: isVisible ? `${index * 300}ms` : "0ms",
             }}
@@ -59,7 +59,9 @@ const PhotoCard = ({ carddata }) => {
                 {e.title}
               </h2>
               <div className="w-[20%] h-[1px] bg-[goldenrod]"></div>
-              <p className={`text-[1.6rem] font-normal text-[#414141] ${e.paraClass}`}>
+              <p
+                className={`text-[1.6rem] font-normal text-[#414141] ${e.paraClass}`}
+              >
                 {e.desc}
               </p>
             </div>
