@@ -13,9 +13,10 @@ const AboutRPC = () => {
       <div className="py-[6rem] px-[20rem] max-xl:px-[5rem] max-md:px-[2rem] w-[100%] h-[100%] relative object-cover bg-[#f2f2f2] transition-all duration-[0.4s] ease-linear">
         <div className="grid grid-cols-2 gap-[4rem] w-[100%] justify-center max-lg:grid-cols-1">
           <div className="flex flex-col justify-center gap-[1rem] w-[100%]">
-            <h2 className="text-[4rem] max-md:text-[3rem] text-[#212121] font-normal uppercase">
+            <h2 className="text-[3rem] text-[#414141] font-normal uppercase">
               About RPC
             </h2>
+            <div className="w-[50%] h-[1px] bg-[goldenrod]"></div>
             <h3 className="text-[2.5rem] text-[#414141]">Our Objectives</h3>
             <div className="flex flex-col gap-[2rem] w-[100%] mt-[2rem]">
               {aboutrpcobjectivesdata.map((e) => {
