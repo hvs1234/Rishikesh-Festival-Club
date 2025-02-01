@@ -1,12 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 // import React from 'react'
-
-import Handlers from "../../Services/Handlers";
-
 const TopBannerCard = ({ topbannerdata }) => {
-  const { useStickyNavbar } = Handlers();
-  useStickyNavbar();
 
   return (
     <>

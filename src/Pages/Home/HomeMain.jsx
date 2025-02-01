@@ -23,7 +23,7 @@ const HomeMain = () => {
             <h2 className="text-[3rem] max-[400px]:text-[2.5rem] text-[black] font-normal">
               Quick Stats&nbsp; <i className="fa-solid fa-bars-progress"></i>
             </h2>
-            <div className="flex gap-[6rem] items-center w-[100%] justify-center mt-[2rem]">
+            <div className="flex gap-[6rem] items-center w-[100%] justify-center mt-[2rem] max-md:flex-col max-md:gap-[2rem]">
               <div className="flex flex-col gap-[1rem] items-center justify-start text-center">
                 <p className="text-[2rem] text-[black] font-semibold">
                   Founded
@@ -52,7 +52,7 @@ const HomeMain = () => {
               </div>
             </div>
           </div>
-          <div className="relative flex items-center justify-center w-[100%] mt-[1rem]">
+          <div className="relative flex items-center justify-center w-[100%] mt-[1rem] max-md:p-0">
             <a
               href="tel:"
               className="rounded-full px-[2rem] py-[1rem] bg-[black] text-[white] text-[1.6rem] font-normal transition-all duration-[0.2s] ease-linear 

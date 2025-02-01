@@ -13,12 +13,9 @@ const Activities = () => {
 
   return (
     <>
-      <Nav />
       <TopBannerCard topbannerdata={activitiesbannerdata} />
       <ActivitiesMain />
 
-      {/* Footer */}
-      <Footer />
     </>
   );
 };

@@ -1,124 +1,122 @@
 /* eslint-disable no-unused-vars */
-import { HiMenuAlt1 } from "react-icons/hi";
-import { Link, useNavigate } from "react-router-dom";
-import Handlers from "../../Services/Handlers";
-import "./Nav.css";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+// import React from 'react'
+
 import { useEffect, useRef, useState } from "react";
+import NavLink from "../../APIs/NavAPI";
+import { Link } from "react-router-dom";
+import { HiMenuAlt1 } from "react-icons/hi";
 
 const Nav = () => {
-  const navigate = useNavigate();
-  const { toggleNavbar, isActive } = Handlers();
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [navlink] = useState(NavLink);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
-  const handleNavigation = (path) => {
-    navigate(path);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleNavigation = () => {
     window.scrollTo(0, 0);
-    toggleNavbar();
-  };
-
-  const handleMouseEnter = (id) => {
-    setOpenDropdown(id);
-  };
-
-  const handleMouseLeave = () => {
-    setOpenDropdown(null);
-  };
-
-  const handleClickOutside = (e) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-      setOpenDropdown(null);
-    }
-  };
-
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
+    setIsMenuOpen(false);
   };
 
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
+    const handleClickOutside = (event) => {
+      if (
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target) &&
+        isMenuOpen
+      ) {
+        setIsMenuOpen(false);
+      }
     };
-  }, []);
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
-      <header
-        className={`header bg-[#43438b] flex justify-center gap-[2rem] w-[100%] h-[auto] top-0 left-0 
-        items-center shadow-sm z-[9999] max-md:justify-between transition-all duration-[0.4s] ease-in-out ${
-          isActive || isNavOpen ? "active" : ""
-        }`}
+      <div
+        className={`header fixed top-0 left-0 z-[999] px-[2rem] py-[2rem] bg-[#4d4d8a] flex justify-center items-center 
+        gap-[4rem] w-[100%] max-md:justify-end`}
       >
-        <nav
-          className={`navbar flex justify-center items-center py-[2rem] border-r-[1px] border-[white] pr-[4rem] max-[768px]:border-0 ${
-            isNavOpen ? "active" : ""
-          }`}
-        >
-          <ul className="flex justify-center items-center gap-[2rem] relative">
-            {Handlers().navlinkdata.map((e) => (
-              <li
-                key={e.id}
-                onMouseEnter={() => e.dropdown && handleMouseEnter(e.id)}
-                onMouseLeave={() => e.dropdown && handleMouseLeave()}
-                ref={dropdownRef}
-                className="relative"
-              >
-                <span
-                  className={e.class}
-                  onClick={() =>
-                    !e.dropdown && handleNavigation(e.to)
-                  }
-                  style={{ cursor: e.dropdown ? "default" : "pointer" }}
+        <nav className="navbar w-[auto] hidden md:flex">
+          <ul className="flex items-center gap-[2rem]">
+            {navlink.map((e) => {
+              return (
+                <Link
+                  key={e.id}
+                  to={e.to}
+                  onClick={handleNavigation}
+                  className={`navlink ${e.class}`}
                 >
                   {e.title}
-                </span>
-                {openDropdown === e.id && e.dropdown && (
-                  <ul className="absolute top-full left-0 bg-[#6b6bb2] text-white shadow-lg rounded-md py-2 z-10">
-                    {e.dropdown.map((item, index) => (
-                      <li
-                        key={index}
-                        className="px-4 py-2 hover:bg-[#43438b] cursor-pointer text-[1.4rem]"
-                        onClick={() => {
-                          handleNavigation(item.to);
-                          setOpenDropdown(null);
-                        }}
-                      >
-                        {item.name}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+                </Link>
+              );
+            })}
           </ul>
         </nav>
-        <div className="flex justify-end items-center px-[2rem] gap-[2rem] py-[2rem] relative text-[white] max-[768px]:w-[100%]">
-          <div className="flex items-center justify-center gap-[2rem]">
-            <a href="#" target="_blank">
-              <FaFacebookF
-                size={40}
-                className="text-[white] px-[1rem] py-[1rem] rounded-full bg-[#6b6bb2] hover:opacity-[0.5]
-              transition-all duration-[0.2s] ease-linear max-[768px]:size-[4rem]"
-              />
-            </a>
-            <a href="#" target="_blank">
-              <FaInstagram
-                size={40}
-                className="text-[white] px-[1rem] py-[1rem] rounded-full bg-[#6b6bb2] hover:opacity-[0.5]
-              transition-all duration-[0.2s] ease-linear max-[768px]:size-[4rem]"
-              />
-            </a>
+        <div className="flex items-center gap-[2rem]">
+          <a
+            href="#"
+            target="_blank"
+            className="fa-brands fa-facebook text-[white] text-[2rem] hover:opacity-[0.5] 
+            transition-all duration-[0.2s] ease-in-out"
+          ></a>
+          <a
+            href="#"
+            target="_blank"
+            className="fa-brands fa-linkedin text-[white] text-[2rem] hover:opacity-[0.5] 
+            transition-all duration-[0.2s] ease-in-out"
+          ></a>
+          <a
+            href="#"
+            target="_blank"
+            className="fa-brands fa-instagram text-[white] text-[2rem] hover:opacity-[0.5] 
+            transition-all duration-[0.2s] ease-in-out"
+          ></a>
+          <div className="md:hidden">
+            <HiMenuAlt1
+              size={20}
+              className="text-[wheat] cursor-pointer"
+              onClick={toggleMenu}
+            />
           </div>
+        </div>
+      </div>
+
+      {/* Mobile View */}
+
+      <div
+        ref={sidebarRef}
+        className={`${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } fixed top-0 right-0 w-[auto] h-screen bg-[#414175] transition-transform duration-[0.3s] ease-in-out 
+        md:hidden z-[999]`}
+      >
+        <div className="flex justify-end p-[1rem]">
           <HiMenuAlt1
-            size={26}
-            className="cursor-pointer nav-btn"
-            onClick={toggleNav}
+            size={20}
+            className="text-white cursor-pointer"
+            onClick={toggleMenu}
           />
         </div>
-      </header>
+        <ul className="flex flex-col justify-center h-[100%] px-[6rem] py-[6rem] gap-[4rem] text-white">
+          {navlink.map((e) => {
+            return (
+              <Link
+                key={e.id}
+                to={e.to}
+                onClick={handleNavigation}
+                className={`navlink ${e.class}`}
+              >
+                {e.title}
+              </Link>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 };

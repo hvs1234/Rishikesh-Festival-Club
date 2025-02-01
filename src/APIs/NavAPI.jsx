@@ -27,18 +27,18 @@ const NavLink = [
   },
   {
     id: 4,
-    title: "Gallery",
-    to: "/",
+    title: "Founders",
+    to: "/founders",
     class:
       "text-[1.6rem] text-[white] max-md:text-[2rem] font-normal hover:scale-[1.1] transition-all duration-[0.2s] navlink tracking-[0] hover:text-[yellow] border-r-[1px] pr-[2rem] max-[768px]:border-[0] border-[#ededed]",
   },
-  {
-    id: 5,
-    title: "Blog",
-    to: "/",
-    class:
-      "text-[1.6rem] text-[white] max-md:text-[2rem] font-normal hover:scale-[1.1] transition-all duration-[0.2s] navlink tracking-[0] hover:text-[yellow] border-r-[1px] pr-[2rem] max-[768px]:border-[0] border-[#ededed]",
-  },
+  // {
+  //   id: 5,
+  //   title: "Blog",
+  //   to: "/",
+  //   class:
+  //     "text-[1.6rem] text-[white] max-md:text-[2rem] font-normal hover:scale-[1.1] transition-all duration-[0.2s] navlink tracking-[0] hover:text-[yellow] border-r-[1px] pr-[2rem] max-[768px]:border-[0] border-[#ededed]",
+  // },
   {
     id: 6,
     title: "Contact",
