@@ -21,3 +21,11 @@ export const FoundersBannerData = [
     desc: `Discover the passionate founders who turned their love for photography into a thriving community, inspiring creativity and connection through every frame`,
   },
 ];
+
+export const EventsBannerData = [
+  {
+    id: 1,
+    title: `Light Up Your Story With Every Shot`,
+    desc: `Join our photography club events to explore, learn, and share your passion for capturing life's unforgettable moments`,
+  },
+];

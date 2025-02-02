@@ -7,6 +7,7 @@ import Nav from "./Components/Header/Nav";
 import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/Btns/ScrollToTop";
 import Founders from "./Pages/Founders/Founders";
+import Events from "./Pages/Events/Events";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
               <Route path="/about" element={<About />}></Route>
               <Route path="/activities" element={<Activities />}></Route>
               <Route path="/founders" element={<Founders />}></Route>
+              <Route path="/events" element={<Events />}></Route>
             </Routes>
           </div>
         </div>
