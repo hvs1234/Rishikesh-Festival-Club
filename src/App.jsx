@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import ScrollToTop from "./Components/Btns/ScrollToTop";
 import Founders from "./Pages/Founders/Founders";
 import Events from "./Pages/Events/Events";
+import Contact from "./Pages/Contact/Contact";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
               <Route path="/activities" element={<Activities />}></Route>
               <Route path="/founders" element={<Founders />}></Route>
               <Route path="/events" element={<Events />}></Route>
+              <Route path="/contact" element={<Contact />}></Route>
             </Routes>
           </div>
         </div>

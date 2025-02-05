@@ -8,7 +8,7 @@ import Nav from "../../Components/Header/Nav";
 import { AboutBannerData } from "../../APIs/TopBannerData";
 import AboutPhotos from "./AboutPhotos";
 import AboutRPC from "./AboutRPC";
-import JoinUs from "../../Components/Contact/JoinUs";
+import JoinUs from "../../Components/Card/JoinUs";
 
 const About = () => {
   const [aboutbannerdata] = useState(AboutBannerData);

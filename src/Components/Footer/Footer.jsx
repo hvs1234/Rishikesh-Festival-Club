@@ -1,10 +1,11 @@
 // import React from 'react'
 
 import { Link } from "react-router-dom";
-import Handlers from "../../Services/Handlers";
 
 const Footer = () => {
-  const { handleOnClick } = Handlers();
+  const handleOnClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <>
@@ -18,28 +19,28 @@ const Footer = () => {
             <ul className="flex flex-col gap-[1.5rem] py-[1rem]">
               <Link
                 to={"/"}
-                onClick={handleOnClick("/")}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Rule of third
               </Link>
               <Link
                 to={"/"}
-                onClick={handleOnClick("/")}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Understanding Computational
               </Link>
               <Link
                 to={"/"}
-                onClick={handleOnClick("/")}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Tips of shadows
               </Link>
               <Link
                 to={"/"}
-                onClick={handleOnClick("/")}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Exposure & metadata
@@ -53,7 +54,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-[1.5rem] py-[1rem] w-[100%]">
               <Link
                 to={"/"}
-                onClick={handleOnClick("/")}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Dehradun, Uttarakhand India
@@ -80,36 +81,36 @@ const Footer = () => {
             </h3>
             <ul className="flex flex-col gap-[1.5rem] py-[1rem]">
               <Link
-                to={"/"}
-                onClick={handleOnClick("/")}
+                to={"/about"}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 About Us
               </Link>
               <Link
-                to={"/"}
-                onClick={handleOnClick("/")}
+                to={"/events"}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Events
               </Link>
               <Link
-                to={"/"}
-                onClick={handleOnClick("/")}
+                to={"/activities"}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
-                Gallery
+                Activities
               </Link>
               <Link
-                to={"/"}
-                onClick={handleOnClick("/")}
+                to={"/founders"}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
-                Blog
+                Founders
               </Link>
               <Link
-                to={"/"}
-                onClick={handleOnClick("/")}
+                to={"/contact"}
+                onClick={handleOnClick}
                 className="capitalize font-normal text-[white] text-[1.6rem]"
               >
                 Contact

@@ -42,7 +42,7 @@ const NavLink = [
   {
     id: 6,
     title: "Contact",
-    to: "/",
+    to: "/contact",
     class:
       "text-[1.6rem] text-[white] max-md:text-[2rem] font-normal hover:scale-[1.1] transition-all duration-[0.2s] navlink tracking-[0] hover:text-[yellow] max-[768px]:border-[0]",
   },
